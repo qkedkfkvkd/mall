@@ -6,10 +6,6 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 
-<style type="text/css">
-	.sidebar-bg {background: aqua;}
-</style>
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -45,10 +41,36 @@ integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00
 				</ul>
 			</div>
 			<div class="col-sm-9">
-				<div class="jumbotron">
-					<h1>우리 쇼핑몰에 어서오십시오.</h1> 
-					<p>많이 사세요.</p> 
-				</div>
+				<form action="write_ok.jsp" method="post" encType="multiplart/form-data">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="2"><h5> 글쓰기 </h5></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>제목: </th>
+								<td><input type="text" placeholder="write title" name="subject"/></td>
+							</tr>
+							<tr>
+								<th>내용: </th>
+								<td><textarea cols="10" placeholder="write content" name="content"></textarea></td>
+							</tr>
+							<tr>
+								<th>비밀번호: </th>
+								<td><input type="password" placeholder="write password"/></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="submit" value="sendOK"/>
+									<input type="reset" value="reset"/>
+									<input type="button" value="listgo" onclick="javascript:location.href='boardList.jsp'"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
 			</div>
 		</div>
 	</div>
